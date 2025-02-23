@@ -1,0 +1,106 @@
+/* Define o estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5ec; 
+    display: flex; /* Essa função alinha os elementos */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+/* Essas funcões abaixo estizam o container principal da tela */
+.container {
+    background-color: #c2c1e0; 
+    border-radius: 5px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 20px; 
+    width: 450px; 
+    text-align: center;
+}
+
+/* Defindo cor e margem dos textos */
+h1, h2 {
+    color: #142c29; 
+    margin-bottom: 10px; 
+}
+
+/* Define o estilo do formulário */
+form {
+    margin-bottom: 20px; 
+}
+
+/* Estiliza os rótulos dos campos */
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    color: #004d40; 
+}
+
+/* Estiliza os campos de entrada, seleção e área de texto */
+input, select, textarea {
+    width: 70%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #004d40; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    resize: none; 
+}
+
+/* Estiliza os botões */
+button {
+    width: 100%; 
+    background-color: #622699; 
+    color: white; 
+    padding: 15px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin: 5px 0; 
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Altera a cor do botão ao passar o mouse */
+button:hover {
+    background-color: #8910ec; 
+}
+
+/* Adiciona um efeito de sombra nos botões */
+button {
+    box-shadow: 0px 4px 8px rgba(39, 57, 216, 0.5); 
+}
+
+/* Estiliza os botões de download */
+.download-button {
+    background-color: #622699; /* Roxo */
+}
+
+/* Altera a cor do botão de download ao passar o mouse */
+.download-button:hover {
+    background-color: #8910ec;
+}
+
+/* Estiliza o botão de exclusão */
+.delete-button {
+    background-color: #a80a0a; 
+}
+
+/* Altera a cor do botão de exclusão ao passar o mouse */
+.delete-button:hover {
+    background-color: #af3019; 
+}
+
+/* Estiliza a área onde os resultados e a lista de atividades são exibidos */
+#resultado, #listaAtividades {
+    margin-top: 20px; 
+    padding: 10px; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ad8bbb;
+    border-radius: 5px; 
+    background-color: #eeeeee; 
+    color: #0c0c0c; 
+    text-align: left;
+}

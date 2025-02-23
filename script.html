@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento de Horas Complementares</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importação da biblioteca XLSX para gerar arquivos Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Importação do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <!-- Contêiner principal que agrupa todo o conteúdo -->
+    <div class="container">
+        <h1>Lançamento de Horas Complementares</h1>
+        <!-- Formulário para inserir os dados da atividade -->
+        <form id="horasForm">
+            <!-- Campo para inserir a descrição da atividade -->
+            <label for="descricao">Descrição da Atividade:</label>
+            <textarea id="descricao" name="descricao" rows="2" required></textarea><br>
+            <!-- Campo para selecionar a categoria da atividade -->
+            <label for="categoria">Categoria da Atividade:</label>
+            <select id="categoria" name="categoria" required onchange="populateTipos()">
+                <option value="Ensino">Ensino</option>
+                <option value="Extensão">Extensão</option>
+                <option value="Pesquisa">Pesquisa</option>
+            </select><br>
+            <!-- Campo para selecionar o tipo específico da atividade -->
+            <label for="tipo">Tipo Específico da Atividade:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecione um tipo</option>
+            </select><br>
+            <!-- Campo para inserir o total de horas da atividade -->
+            <label for="totalHoras">Total de Horas da Atividade:</label>
+            <input type="number" id="totalHoras" name="totalHoras" required><br>
+            <!-- Criação dos botões do site -->
+            <button type="button" onclick="calcularHoras()">Calcular Horas</button>
+            <button type="button" class="download-button" onclick="baixarLista()">Baixar Lista</button>
+            <button type="button" class="download-button" onclick="exibirAtividades()">Exibir Atividades</button>
+            <button type="button" class="delete-button" onclick="excluirAtividade()">Excluir Atividade</button>
+        </form>
+        <!-- Área no sistema que mostra os resultados cadastrados e a lista de atividades -->
+        <h2>Resultados</h2>
+        <div id="resultado"></div>
+        <div id="listaAtividades"></div>
+    </div>
+    <!-- Link para o arquivo .Js -->
+    <script src="script.js"></script>
+</body>
+</html>
